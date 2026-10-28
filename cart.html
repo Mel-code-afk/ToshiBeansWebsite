@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toshi Beans | Cart</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================
+           CART PAGE BACKGROUND
+        ========================= */
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family: "Poppins", sans-serif;
+
+            color: #3B281E;
+
+            background-image:
+                linear-gradient(
+                    rgba(247, 241, 232, 0.20),
+                    rgba(247, 241, 232, 0.20)
+                ),
+                url("images/cart.png");
+
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            background-color: #F7F1E8;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .site-header {
+            background: rgba(255, 255, 255, 0.72);
+
+            backdrop-filter: blur(6px);
+
+            border-bottom:
+                1px solid rgba(107, 66, 38, 0.12);
+        }
+
+
+        /* =========================
+           CART PAGE
+        ========================= */
+
+        .cart-page {
+            width: min(1200px, calc(100% - 60px));
+
+            min-height: 650px;
+
+            margin: 0 auto;
+
+            padding: 55px 0 75px;
+        }
+
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        .cart-heading-small {
+            margin: 0 0 8px;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            color: #9A6F4C;
+        }
+
+        .cart-title {
+            margin: 0 0 38px;
+
+            font-size: 38px;
+            line-height: 1.1;
+
+            font-weight: 700;
+
+            color: #3B281E;
+        }
+
+
+        /* =========================
+           MAIN LAYOUT
+        ========================= */
+
+        .cart-layout {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.7fr)
+                minmax(300px, 0.9fr);
+
+            gap: 38px;
+
+            align-items: start;
+        }
+
+
+        /* =========================
+           CART CARDS
+        ========================= */
+
+        .cart-card,
+        .summary-card {
+            border:
+                1px solid rgba(184, 137, 104, 0.70);
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 12px 35px rgba(59, 40, 30, 0.06);
+        }
+
+
+        /* LEFT CART */
+
+        .cart-card {
+            min-height: 410px;
+
+            padding: 28px;
+
+            background:
+                rgba(255, 255, 255, 0.84);
+        }
+
+
+        /* RIGHT SUMMARY */
+
+        .summary-card {
+            padding: 30px;
+
+            background:
+                rgba(246, 234, 223, 0.88);
+
+            backdrop-filter: blur(3px);
+        }
+
+
+        /* =========================
+           CARD HEADERS
+        ========================= */
+
+        .cart-card-header {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .cart-card-header h2,
+        .summary-card h2 {
+            margin: 0;
+
+            font-size: 19px;
+            font-weight: 700;
+
+            color: #3B281E;
+        }
+
+        .item-count {
+            font-size: 14px;
+            font-weight: 700;
+
+            color: #3B281E;
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+
+            margin: 16px 0 20px;
+
+            background:
+                rgba(184, 137, 104, 0.65);
+        }
+
+
+        /* =========================
+           CART ITEMS
+        ========================= */
+
+        .cart-list {
+            min-height: 230px;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 18px;
+        }
+
+        .cart-item {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                90px
+                85px;
+
+            align-items: center;
+
+            gap: 20px;
+
+            padding-bottom: 12px;
+        }
+
+        .cart-item-name {
+            margin: 0 0 3px;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            color: #3B281E;
+
+            text-transform: uppercase;
+        }
+
+        .cart-item-meta {
+            margin: 0;
+
+            font-size: 11px;
+            font-weight: 500;
+
+            color: #805D43;
+        }
+
+        .cart-item-price {
+            text-align: right;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            color: #7B4A2C;
+        }
+
+
+        /* =========================
+           REMOVE
+        ========================= */
+
+        .remove-btn {
+            min-height: 34px;
+
+            border:
+                1px solid #B88968;
+
+            border-radius: 7px;
+
+            background:
+                rgba(255, 255, 255, 0.80);
+
+            color: #7B4A2C;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+        }
+
+        .remove-btn:hover {
+            background: #7B4A2C;
+
+            color: #FFFFFF;
+        }
+
+
+        /* =========================
+           CONTINUE SHOPPING
+        ========================= */
+
+        .continue-shopping {
+            display: inline-block;
+
+            margin-top: 3px;
+
+            text-decoration: none;
+
+            color: #3B281E;
+
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .continue-shopping:hover {
+            color: #7B4A2C;
+        }
+
+        .continue-note {
+            margin: 5px 0 0;
+
+            font-size: 11px;
+
+            color: #80634E;
+        }
+
+
+        /* =========================
+           ORDER SUMMARY
+        ========================= */
+
+        .summary-row {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-bottom: 17px;
+
+            font-size: 12px;
+
+            color: #765B4A;
+        }
+
+        .summary-row strong {
+            font-size: 13px;
+
+            color: #3B281E;
+        }
+
+        .summary-total {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 5px;
+
+            margin-bottom: 24px;
+        }
+
+        .summary-total span {
+            font-size: 12px;
+            font-weight: 700;
+
+            color: #3B281E;
+        }
+
+        .summary-total strong {
+            font-size: 28px;
+            font-weight: 700;
+
+            color: #7B4A2C;
+        }
+
+
+        /* =========================
+           CHECKOUT
+        ========================= */
+
+        .checkout-btn {
+            width: 100%;
+            height: 48px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background: #7B4A2C;
+
+            color: #FFFFFF;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+        }
+
+        .checkout-btn:hover {
+            background: #5E351F;
+
+            transform: translateY(-1px);
+        }
+
+        .checkout-btn:disabled {
+            opacity: 0.55;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+
+        /* =========================
+           EMPTY CART
+        ========================= */
+
+        .empty-cart {
+            min-height: 220px;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .empty-cart h3 {
+            margin: 0 0 8px;
+
+            font-size: 20px;
+
+            color: #3B281E;
+        }
+
+        .empty-cart p {
+            margin: 0;
+
+            font-size: 12px;
+
+            color: #765B4A;
+        }
+
+        .empty-cart a {
+            margin-top: 18px;
+
+            padding: 10px 18px;
+
+            border-radius: 8px;
+
+            background: #7B4A2C;
+
+            color: #FFFFFF;
+
+            text-decoration: none;
+
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .site-footer {
+            background:
+                rgba(59, 40, 30, 0.94);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .cart-layout {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .cart-page {
+                width: calc(100% - 30px);
+
+                padding: 40px 0 55px;
+            }
+
+            .cart-title {
+                font-size: 30px;
+            }
+
+            .cart-card,
+            .summary-card {
+                padding: 20px;
+            }
+
+            .cart-item {
+                grid-template-columns:
+                    1fr auto;
+
+                gap: 10px;
+            }
+
+            .cart-item-price {
+                text-align: right;
+            }
+
+            .remove-btn {
+                grid-column: 1 / 3;
+
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+                TOSHI BEANS
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html" class="nav-link">
+                    HOME
+                </a>
+
+                <a href="menu.html" class="nav-link active">
+                    MENU
+                </a>
+
+                <a href="about.html" class="nav-link">
+                    ABOUT
+                </a>
+
+                <a href="contact.html" class="nav-link">
+                    CONTACT
+                </a>
+
+                <a href="login.html" class="nav-link">
+                    LOGIN
+                </a>
+
+                <a href="signup.html" class="signup-btn">
+                    SIGN UP
+                </a>
+
+                <a href="cart.html" class="order-nav-btn">
+                    CART
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- CART -->
+    <main class="cart-page">
+
+        <p class="cart-heading-small">
+            YOUR ORDER
+        </p>
+
+        <h1 class="cart-title">
+            SHOPPING CART
+        </h1>
+
+
+        <section class="cart-layout">
+
+
+            <!-- LEFT -->
+            <div class="cart-card">
+
+                <div class="cart-card-header">
+
+                    <h2>
+                        CART ITEMS
+                    </h2>
+
+                    <span
+                        class="item-count"
+                        id="itemCount"
+                    >
+                        0 items
+                    </span>
+
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <div
+                    class="cart-list"
+                    id="cartList"
+                >
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <a
+                    href="menu.html"
+                    class="continue-shopping"
+                >
+                    ← CONTINUE SHOPPING
+                </a>
+
+                <p class="continue-note">
+                    Fresh coffee and snacks are just one click away.
+                </p>
+
+            </div>
+
+
+            <!-- RIGHT -->
+            <aside class="summary-card">
+
+                <h2>
+                    ORDER SUMMARY
+                </h2>
+
+
+                <div class="divider"></div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="subtotalAmount">
+                        ₱0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Service Fee
+                    </span>
+
+                    <strong id="serviceFeeAmount">
+                        ₱0
+                    </strong>
+
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        TOTAL
+                    </span>
+
+                    <strong id="totalAmount">
+                        ₱0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="checkout-btn"
+                    id="checkoutButton"
+                >
+                    CHECKOUT
+                </button>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                TOSHI BEANS
+            </div>
+
+            <p>
+                Fresh coffee. Good food. Better days.
+            </p>
+
+            <p class="copyright">
+                © 2026 Toshi Beans. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        const CART_KEY = "toshiBeansCart";
+
+
+        function getCart() {
+
+            return JSON.parse(
+                localStorage.getItem(CART_KEY)
+            ) || [];
+
+        }
+
+
+        function saveCart(cart) {
+
+            localStorage.setItem(
+                CART_KEY,
+                JSON.stringify(cart)
+            );
+
+        }
+
+
+        function peso(value) {
+
+            return "₱" +
+                Number(value).toLocaleString("en-PH");
+
+        }
+
+
+        function removeItem(index) {
+
+            const cart = getCart();
+
+            cart.splice(index, 1);
+
+            saveCart(cart);
+
+            renderCart();
+
+        }
+
+
+        function renderCart() {
+
+            const cart =
+                getCart();
+
+
+            const cartList =
+                document.getElementById("cartList");
+
+            const itemCount =
+                document.getElementById("itemCount");
+
+            const subtotalAmount =
+                document.getElementById("subtotalAmount");
+
+            const serviceFeeAmount =
+                document.getElementById("serviceFeeAmount");
+
+            const totalAmount =
+                document.getElementById("totalAmount");
+
+            const checkoutButton =
+                document.getElementById("checkoutButton");
+
+
+            cartList.innerHTML = "";
+
+
+            if (cart.length === 0) {
+
+                itemCount.textContent =
+                    "0 items";
+
+                subtotalAmount.textContent =
+                    "₱0";
+
+                serviceFeeAmount.textContent =
+                    "₱0";
+
+                totalAmount.textContent =
+                    "₱0";
+
+                checkoutButton.disabled =
+                    true;
+
+
+                cartList.innerHTML = `
+
+                    <div class="empty-cart">
+
+                        <h3>
+                            Your cart is empty
+                        </h3>
+
+                        <p>
+                            Add your favorite drinks and snacks first.
+                        </p>
+
+                        <a href="menu.html">
+                            VIEW MENU
+                        </a>
+
+                    </div>
+
+                `;
+
+
+                return;
+
+            }
+
+
+            let subtotal = 0;
+            let totalItems = 0;
+
+
+            cart.forEach((item, index) => {
+
+                const quantity =
+                    Number(item.quantity);
+
+                const price =
+                    Number(item.price);
+
+                const itemTotal =
+                    price * quantity;
+
+
+                subtotal +=
+                    itemTotal;
+
+                totalItems +=
+                    quantity;
+
+
+                const row =
+                    document.createElement("div");
+
+
+                row.className =
+                    "cart-item";
+
+
+                const itemType =
+                    item.size === "1 serving"
+                    ? quantity +
+                      (quantity === 1
+                        ? " serving"
+                        : " servings")
+                    : item.size +
+                      " • " +
+                      quantity +
+                      (quantity === 1
+                        ? " cup"
+                        : " cups");
+
+
+                row.innerHTML = `
+
+                    <div>
+
+                        <h3 class="cart-item-name">
+                            ${item.name}
+                        </h3>
+
+                        <p class="cart-item-meta">
+                            ${itemType}
+                        </p>
+
+                    </div>
+
+
+                    <div class="cart-item-price">
+                        ${peso(itemTotal)}
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="remove-btn"
+                        onclick="removeItem(${index})"
+                    >
+                        REMOVE
+                    </button>
+
+                `;
+
+
+                cartList.appendChild(row);
+
+            });
+
+
+            itemCount.textContent =
+                totalItems +
+                (totalItems === 1
+                    ? " item"
+                    : " items");
+
+
+            subtotalAmount.textContent =
+                peso(subtotal);
+
+
+            /* Reference design uses ₱0 */
+            const serviceFee = 0;
+
+
+            serviceFeeAmount.textContent =
+                peso(serviceFee);
+
+
+            totalAmount.textContent =
+                peso(
+                    subtotal + serviceFee
+                );
+
+
+            checkoutButton.disabled =
+                false;
+
+        }
+
+
+        document
+            .getElementById("checkoutButton")
+            .addEventListener(
+                "click",
+                function () {
+
+                    const cart =
+                        getCart();
+
+
+                    if (cart.length === 0) {
+                        return;
+                    }
+
+
+                    /* Remember that Login came from checkout */
+                    localStorage.setItem(
+                        "toshiBeansCheckout",
+                        "true"
+                    );
+
+
+                    window.location.href =
+                        "login.html";
+
+                }
+            );
+
+
+        renderCart();
+
+    </script>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

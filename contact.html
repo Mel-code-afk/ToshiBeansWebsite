@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toshi Beans | Contact</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================
+           CONTACT PAGE ONLY
+        ========================= */
+
+        body.contactx-body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            background-image: url("images/home.png");
+            background-size: 100vw 100vh;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            background-color: #F7F1E8;
+        }
+
+
+        /* HEADER */
+
+        .contactx-body .site-header {
+            background: rgba(255, 255, 255, 0.70);
+            backdrop-filter: blur(6px);
+        }
+
+
+        /* MAIN */
+
+        .contactx-main {
+            flex: 1;
+
+            width: min(1100px, calc(100% - 60px));
+
+            margin: 0 auto;
+
+            padding: 45px 0 55px;
+        }
+
+
+        /* HEADING */
+
+        .contactx-heading {
+            max-width: 760px;
+
+            margin: 0 auto 34px;
+
+            text-align: center;
+        }
+
+        .contactx-brand-label {
+            margin: 0 0 8px;
+
+            font-size: 10px;
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            color: #7B4A2C;
+        }
+
+        .contactx-heading h1 {
+            margin: 0 0 14px;
+
+            font-size: 31px;
+            line-height: 1.2;
+
+            font-weight: 700;
+
+            color: #3B281E;
+        }
+
+        .contactx-heading-text {
+            margin: 0;
+
+            font-size: 12px;
+            line-height: 1.6;
+
+            color: #3B281E;
+        }
+
+
+        /* CONTACT CARD */
+
+        .contactx-card {
+            width: min(820px, 100%);
+            min-height: 290px;
+
+            margin: 0 auto;
+
+            padding: 38px 40px;
+
+            border: 1px solid #B88968;
+            border-radius: 14px;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.08),
+                    rgba(255,255,255,0.08)
+                ),
+                url("images/cart.png");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+
+        /* CARD TITLE */
+
+        .contactx-card h2 {
+            margin: 0 0 22px;
+
+            font-size: 18px;
+            font-weight: 700;
+
+            color: #3B281E;
+        }
+
+
+        /* INFO */
+
+        .contactx-info {
+            margin-bottom: 17px;
+        }
+
+        .contactx-info:last-child {
+            margin-bottom: 0;
+        }
+
+        .contactx-info h3 {
+            margin: 0 0 4px;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            color: #3B281E;
+        }
+
+        .contactx-info p {
+            margin: 0;
+
+            font-size: 11px;
+
+            color: #7A5841;
+        }
+
+
+        /* FOOTER */
+
+        .contactx-body .site-footer {
+            width: 100%;
+
+            margin: 0;
+            padding: 18px 0;
+
+            background: #3B281E;
+
+            color: #FFFFFF;
+        }
+
+        .contactx-body .footer-container {
+            width: min(1100px, calc(100% - 40px));
+
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 20px;
+
+            text-align: center;
+        }
+
+        .contactx-body .footer-brand,
+        .contactx-body .footer-container p {
+            font-size: 9px;
+
+            color: #F0E7DF;
+        }
+
+        .contactx-body .copyright {
+            text-align: center;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 700px) {
+
+            .contactx-main {
+                width: calc(100% - 30px);
+
+                padding: 35px 0 45px;
+            }
+
+            .contactx-heading h1 {
+                font-size: 27px;
+            }
+
+            .contactx-card {
+                min-height: 270px;
+
+                padding: 30px 20px;
+            }
+
+            .contactx-body .footer-container {
+                flex-direction: column;
+
+                gap: 3px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body class="contactx-body">
+
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+                TOSHI BEANS
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html" class="nav-link">
+                    HOME
+                </a>
+
+                <a href="menu.html" class="nav-link">
+                    MENU
+                </a>
+
+                <a href="about.html" class="nav-link">
+                    ABOUT
+                </a>
+
+                <a href="contact.html" class="nav-link active">
+                    CONTACT
+                </a>
+
+                <a href="login.html" class="nav-link">
+                    LOGIN
+                </a>
+
+                <a href="signup.html" class="signup-btn">
+                    SIGN UP
+                </a>
+
+                <a href="cart.html" class="order-nav-btn">
+                    CART
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTACT -->
+    <main class="contactx-main">
+
+        <section class="contactx-heading">
+
+            <p class="contactx-brand-label">
+                TOSHI BEANS
+            </p>
+
+            <h1>
+                GET IN TOUCH
+            </h1>
+
+            <p class="contactx-heading-text">
+                Have a question or want to know more about Toshi Beans?
+                We'd love to hear from you.
+            </p>
+
+        </section>
+
+
+        <section class="contactx-card">
+
+            <h2>
+                CONTACT INFORMATION
+            </h2>
+
+
+            <div class="contactx-info">
+
+                <h3>
+                    Email
+                </h3>
+
+                <p>
+                    toshibean@example.com
+                </p>
+
+            </div>
+
+
+            <div class="contactx-info">
+
+                <h3>
+                    Phone
+                </h3>
+
+                <p>
+                    0912 345 6789
+                </p>
+
+            </div>
+
+
+            <div class="contactx-info">
+
+                <h3>
+                    Social Media
+                </h3>
+
+                <p>
+                    Facebook / Toshi Beans
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                TOSHI BEANS
+            </div>
+
+            <p>
+                • Fresh Coffee & Snacks
+            </p>
+
+            <p class="copyright">
+                © 2026 Toshi Beans
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

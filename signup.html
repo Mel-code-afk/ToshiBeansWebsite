@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toshi Beans | Sign Up</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================
+           SIGN UP PAGE
+        ========================= */
+
+        body.signupx-body {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            background-image: url("images/home.png");
+            background-size: 100vw 100vh;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            background-color: #F7F1E8;
+        }
+
+
+        /* HEADER */
+
+        .signupx-body .site-header {
+            background: rgba(255, 255, 255, 0.70);
+            backdrop-filter: blur(6px);
+        }
+
+
+        /* MAIN */
+
+        .signupx-main {
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 35px 20px;
+        }
+
+
+        /* CARD */
+
+        .signupx-card {
+            width: 520px;
+            max-width: 100%;
+
+            padding: 20px 34px 16px;
+
+            background: rgba(255, 255, 255, 0.94);
+
+            border: 1px solid #B88968;
+            border-radius: 16px;
+
+            box-shadow:
+                0 14px 38px rgba(59, 40, 30, 0.07);
+        }
+
+
+        /* TITLE */
+
+        .signupx-card h1 {
+            margin: 0 0 24px;
+
+            text-align: center;
+
+            font-size: 28px;
+            font-weight: 700;
+
+            color: #3B281E;
+        }
+
+
+        /* FORM */
+
+        .signupx-form {
+            display: flex;
+            flex-direction: column;
+
+            gap: 17px;
+        }
+
+        .signupx-group {
+            display: flex;
+            flex-direction: column;
+
+            gap: 8px;
+        }
+
+        .signupx-group label {
+            font-size: 12px;
+            font-weight: 600;
+
+            color: #3B281E;
+        }
+
+        .signupx-group input {
+            width: 100%;
+            height: 46px;
+
+            padding: 0 14px;
+
+            border: 1px solid #B88968;
+            border-radius: 7px;
+
+            background: #FFFFFF;
+
+            color: #3B281E;
+
+            font-size: 13px;
+
+            outline: none;
+        }
+
+        .signupx-group input::placeholder {
+            color: #B79C89;
+        }
+
+        .signupx-group input:focus {
+            border-color: #6B4226;
+
+            box-shadow:
+                0 0 0 3px rgba(107, 66, 38, 0.08);
+        }
+
+
+        /* BUTTON */
+
+        .signupx-button {
+            width: 100%;
+            height: 46px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: #7B4A2C;
+
+            color: #FFFFFF;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+        }
+
+        .signupx-button:hover {
+            background: #5E351F;
+        }
+
+
+        /* LOGIN TEXT */
+
+        .signupx-switch {
+            margin: 13px 0 0;
+
+            text-align: center;
+
+            font-size: 11px;
+
+            color: #765B4A;
+        }
+
+        .signupx-switch a {
+            color: #7B4A2C;
+
+            font-weight: 600;
+        }
+
+        .signupx-switch a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* FOOTER */
+
+        .signupx-body .site-footer {
+            width: 100%;
+
+            margin: 0;
+            padding: 18px 0;
+
+            background: #3B281E;
+        }
+
+        .signupx-body .footer-container {
+            width: min(1100px, calc(100% - 40px));
+
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 20px;
+
+            text-align: center;
+        }
+
+        .signupx-body .footer-brand,
+        .signupx-body .footer-container p {
+            font-size: 9px;
+
+            color: #F0E7DF;
+        }
+
+
+        /* PHONE */
+
+        @media (max-width: 600px) {
+
+            .signupx-main {
+                padding: 30px 15px;
+            }
+
+            .signupx-card {
+                padding: 22px 18px 16px;
+            }
+
+            .signupx-card h1 {
+                font-size: 25px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body class="signupx-body">
+
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+                TOSHI BEANS
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html" class="nav-link">
+                    HOME
+                </a>
+
+                <a href="menu.html" class="nav-link">
+                    MENU
+                </a>
+
+                <a href="about.html" class="nav-link">
+                    ABOUT
+                </a>
+
+                <a href="contact.html" class="nav-link">
+                    CONTACT
+                </a>
+
+                <a href="login.html" class="nav-link">
+                    LOGIN
+                </a>
+
+                <a href="signup.html" class="signup-btn">
+                    SIGN UP
+                </a>
+
+                <a href="cart.html" class="order-nav-btn">
+                    CART
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- SIGN UP -->
+    <main class="signupx-main">
+
+        <section class="signupx-card">
+
+            <h1>
+                SIGN UP
+            </h1>
+
+
+            <form
+                class="signupx-form"
+                id="signupForm"
+            >
+
+                <!-- FULL NAME -->
+                <div class="signupx-group">
+
+                    <label for="signupName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="signupName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="signupx-group">
+
+                    <label for="signupEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="signupx-group">
+
+                    <label for="signupPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="signupPassword"
+                        placeholder="Password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="signupx-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="signupx-button"
+                >
+                    SIGN UP
+                </button>
+
+            </form>
+
+
+            <p class="signupx-switch">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                TOSHI BEANS
+            </div>
+
+            <p>
+                • Fresh Coffee & Snacks
+            </p>
+
+            <p class="copyright">
+                © 2026 Toshi Beans
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        const signupForm =
+            document.getElementById("signupForm");
+
+
+        signupForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const fullName =
+                    document
+                        .getElementById("signupName")
+                        .value
+                        .trim();
+
+
+                const email =
+                    document
+                        .getElementById("signupEmail")
+                        .value
+                        .trim();
+
+
+                const password =
+                    document
+                        .getElementById("signupPassword")
+                        .value;
+
+
+                const confirmPassword =
+                    document
+                        .getElementById("confirmPassword")
+                        .value;
+
+
+                if (
+                    fullName === "" ||
+                    email === "" ||
+                    password === "" ||
+                    confirmPassword === ""
+                ) {
+
+                    alert(
+                        "Please complete all fields."
+                    );
+
+                    return;
+
+                }
+
+
+                if (
+                    password !==
+                    confirmPassword
+                ) {
+
+                    alert(
+                        "Passwords do not match."
+                    );
+
+                    return;
+
+                }
+
+
+                localStorage.setItem(
+                    "toshiBeansLoggedIn",
+                    "true"
+                );
+
+
+                localStorage.setItem(
+                    "toshiBeansUserName",
+                    fullName
+                );
+
+
+                localStorage.setItem(
+                    "toshiBeansUserEmail",
+                    email
+                );
+
+
+                const checkout =
+                    localStorage.getItem(
+                        "toshiBeansCheckout"
+                    );
+
+
+                if (
+                    checkout === "true"
+                ) {
+
+                    localStorage.removeItem(
+                        "toshiBeansCheckout"
+                    );
+
+
+                    window.location.href =
+                        "order-confirmed.html";
+
+                }
+
+                else {
+
+                    window.location.href =
+                        "index.html";
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
