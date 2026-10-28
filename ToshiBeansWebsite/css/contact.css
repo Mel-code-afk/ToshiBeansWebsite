@@ -1,0 +1,315 @@
+/* =========================
+   CONTACT PAGE
+========================= */
+
+body {
+    background: #1F1F1F;
+}
+
+.contact-page {
+    min-height: calc(100vh - 80px);
+
+    padding: 45px 40px 55px;
+
+    background-image: url("../images/home.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: #F7F1E8;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.contact-container {
+    width: min(1050px, 100%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   CONTACT HEADING
+========================= */
+
+.contact-heading {
+    max-width: 760px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+.contact-heading > p {
+    margin: 0 0 8px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    color: #7B4A2C;
+}
+
+.contact-heading h1 {
+    margin: 0 0 14px;
+
+    font-size: 31px;
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    color: #3B281E;
+}
+
+.contact-heading span {
+    display: block;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    color: #3B281E;
+}
+
+
+/* =========================
+   CONTACT CONTENT
+========================= */
+
+.contact-content {
+    width: 100%;
+
+    display: block;
+}
+
+
+/* =========================
+   CONTACT CARD
+========================= */
+
+.contact-info {
+    width: min(800px, 100%);
+
+    min-height: 290px;
+
+    margin: 0 auto;
+
+    padding: 38px 45px;
+
+    border: 1px solid #B88968;
+
+    border-radius: 14px;
+
+    background-image: url("../images/cart.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.contact-small-title {
+    margin: 0 0 8px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    letter-spacing: 0;
+
+    color: #3B281E;
+}
+
+
+/* =========================
+   CONTACT ITEMS
+========================= */
+
+.contact-item {
+    min-height: auto;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 0;
+
+    background: transparent;
+
+    box-shadow: none;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+}
+
+.contact-item span {
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0;
+
+    color: #3B281E;
+}
+
+.contact-item strong {
+    font-size: 11px;
+    font-weight: 400;
+
+    color: #7A5841;
+}
+
+
+/* =========================
+   REMOVE UNUSED VISUAL
+========================= */
+
+.contact-visual,
+.contact-coffee-card {
+    display: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.contact-page + .site-footer {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 18px 0;
+
+    background: #3B281E;
+
+    color: #FFFFFF;
+}
+
+.contact-page + .site-footer .footer-container {
+    width: min(1000px, calc(100% - 40px));
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    text-align: center;
+}
+
+.contact-page + .site-footer .footer-brand,
+.contact-page + .site-footer p {
+    font-size: 9px;
+    font-weight: 400;
+
+    color: #F0E7DF;
+}
+
+.contact-page + .site-footer .copyright {
+    text-align: center;
+}
+
+
+/* =========================
+   HEADER FOR CONTACT
+========================= */
+
+.site-header {
+    background: rgba(255, 255, 255, 0.72);
+
+    backdrop-filter: blur(6px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    .contact-page {
+        padding:
+            40px 25px 50px;
+    }
+
+    .contact-info {
+        padding:
+            35px 25px;
+    }
+
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 600px) {
+
+    .contact-page {
+        padding:
+            35px 15px 45px;
+
+        background-size:
+            cover;
+    }
+
+    .contact-heading {
+        margin-bottom:
+            30px;
+    }
+
+    .contact-heading h1 {
+        font-size:
+            27px;
+    }
+
+    .contact-heading span {
+        font-size:
+            11px;
+    }
+
+    .contact-info {
+        min-height:
+            270px;
+
+        padding:
+            30px 18px;
+    }
+
+    .contact-small-title {
+        font-size:
+            16px;
+    }
+
+    .contact-page + .site-footer .footer-container {
+        flex-direction:
+            column;
+
+        gap:
+            2px;
+    }
+
+}

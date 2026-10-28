@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toshi Beans | About</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================
+           ABOUT PAGE
+        ========================= */
+
+        body.aboutx-body {
+            margin: 0;
+            min-height: 100vh;
+
+            background-image: url("images/home.png");
+            background-size: 100vw 100vh;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            background-color: #F7F1E8;
+        }
+
+
+        /* HEADER */
+
+        .aboutx-body .site-header {
+            background: rgba(255, 255, 255, 0.70);
+            backdrop-filter: blur(6px);
+        }
+
+
+        /* MAIN */
+
+        .aboutx-main {
+            width: min(1100px, calc(100% - 60px));
+
+            margin: 0 auto;
+
+            padding: 45px 0 55px;
+        }
+
+
+        /* TOP HEADING */
+
+        .aboutx-heading {
+            max-width: 760px;
+
+            margin: 0 auto 45px;
+
+            text-align: center;
+        }
+
+        .aboutx-small-top {
+            margin: 0 0 8px;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            color: #9A6F4C;
+        }
+
+        .aboutx-heading h1 {
+            margin: 0 0 12px;
+
+            font-size: 32px;
+            font-weight: 700;
+
+            color: #3B281E;
+        }
+
+        .aboutx-heading-text {
+            margin: 0;
+
+            font-size: 13px;
+            line-height: 1.7;
+
+            color: #5F493C;
+        }
+
+
+        /* STORY + LOGO */
+
+        .aboutx-content {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                330px;
+
+            align-items: center;
+
+            gap: 80px;
+
+            margin-bottom: 42px;
+        }
+
+
+        /* STORY */
+
+        .aboutx-story {
+            width: 100%;
+        }
+
+        .aboutx-story-label {
+            margin: 0 0 10px;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            color: #B88968;
+        }
+
+        .aboutx-story h2 {
+            max-width: 560px;
+
+            margin: 0 0 18px;
+
+            font-size: 30px;
+            line-height: 1.25;
+
+            color: #3B281E;
+        }
+
+        .aboutx-story-text {
+            max-width: 620px;
+
+            margin: 0 0 15px;
+
+            font-size: 13px;
+            line-height: 1.75;
+
+            color: #5F493C;
+        }
+
+
+        /* LOGO */
+
+        .aboutx-logo-wrap {
+            width: 330px;
+            height: 330px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            background: #FFFFFF;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            box-shadow:
+                0 15px 38px rgba(59, 40, 30, 0.08);
+        }
+
+        .aboutx-logo {
+            width: 85%;
+            height: 85%;
+
+            display: block;
+
+            object-fit: contain;
+        }
+
+
+        /* TAGLINE */
+
+        .aboutx-tagline {
+            min-height: 75px;
+
+            border-top:
+                1px solid rgba(184, 137, 104, 0.45);
+
+            border-bottom:
+                1px solid rgba(184, 137, 104, 0.45);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 24px;
+
+            text-align: center;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            color: #7B4A2C;
+        }
+
+        .aboutx-tagline span {
+            color: #B88968;
+        }
+
+
+        /* FOOTER */
+
+        .aboutx-body .site-footer {
+            width: 100%;
+
+            margin: 0;
+
+            padding: 22px 0;
+
+            background: #3B281E;
+        }
+
+        .aboutx-body .footer-container {
+            width: min(1200px, calc(100% - 40px));
+
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 20px;
+
+            text-align: center;
+        }
+
+        .aboutx-body .footer-brand,
+        .aboutx-body .footer-container p {
+            font-size: 11px;
+
+            color: #F0E7DF;
+        }
+
+
+        /* TABLET */
+
+        @media (max-width: 850px) {
+
+            .aboutx-content {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .aboutx-story {
+                text-align: center;
+            }
+
+            .aboutx-story h2,
+            .aboutx-story-text {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .aboutx-logo-wrap {
+                margin: 0 auto;
+            }
+
+        }
+
+
+        /* PHONE */
+
+        @media (max-width: 600px) {
+
+            .aboutx-main {
+                width: calc(100% - 30px);
+
+                padding: 35px 0 45px;
+            }
+
+            .aboutx-heading h1 {
+                font-size: 27px;
+            }
+
+            .aboutx-story h2 {
+                font-size: 23px;
+            }
+
+            .aboutx-logo-wrap {
+                width: 240px;
+                height: 240px;
+            }
+
+            .aboutx-tagline {
+                flex-direction: column;
+
+                gap: 5px;
+
+                padding: 20px 10px;
+
+                font-size: 13px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body class="aboutx-body">
+
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+                TOSHI BEANS
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html" class="nav-link">
+                    HOME
+                </a>
+
+                <a href="menu.html" class="nav-link">
+                    MENU
+                </a>
+
+                <a href="about.html" class="nav-link active">
+                    ABOUT
+                </a>
+
+                <a href="contact.html" class="nav-link">
+                    CONTACT
+                </a>
+
+                <a href="login.html" class="nav-link">
+                    LOGIN
+                </a>
+
+                <a href="signup.html" class="signup-btn">
+                    SIGN UP
+                </a>
+
+                <a href="cart.html" class="order-nav-btn">
+                    CART
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ABOUT -->
+    <main class="aboutx-main">
+
+
+        <!-- HEADING -->
+        <section class="aboutx-heading">
+
+            <p class="aboutx-small-top">
+                TOSHI BEANS
+            </p>
+
+            <h1>
+                ABOUT TOSHI BEANS
+            </h1>
+
+            <p class="aboutx-heading-text">
+                Toshi Beans is a cozy coffee shop offering freshly brewed
+                drinks and delicious snacks for every coffee lover.
+            </p>
+
+        </section>
+
+
+        <!-- STORY + LOGO -->
+        <section class="aboutx-content">
+
+
+            <!-- STORY -->
+            <div class="aboutx-story">
+
+                <p class="aboutx-story-label">
+                    OUR STORY
+                </p>
+
+                <h2>
+                    Coffee made for simple and comfortable moments.
+                </h2>
+
+                <p class="aboutx-story-text">
+                    Toshi Beans was created to give customers a relaxing
+                    place where they can enjoy good coffee, refreshing drinks,
+                    and tasty snacks. We want every cup to feel simple,
+                    warm, and enjoyable.
+                </p>
+
+                <p class="aboutx-story-text">
+                    Our goal is to serve quality drinks and food while
+                    creating a comfortable experience for every customer.
+                    Whether you are taking a break, meeting friends, or
+                    simply enjoying your favorite drink, Toshi Beans is
+                    here to make your day better.
+                </p>
+
+            </div>
+
+
+            <!-- LOGO -->
+            <div class="aboutx-logo-wrap">
+
+                <img
+                    src="images/logo.jpg"
+                    alt="Toshi Beans Logo"
+                    class="aboutx-logo"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- TAGLINE -->
+        <section class="aboutx-tagline">
+
+            QUALITY
+
+            <span>•</span>
+
+            COMFORT
+
+            <span>•</span>
+
+            GOOD COFFEE
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                TOSHI BEANS
+            </div>
+
+            <p>
+                • Fresh Coffee & Snacks
+            </p>
+
+            <p class="copyright">
+                © 2026 Toshi Beans
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

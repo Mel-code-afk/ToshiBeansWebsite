@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toshi Beans | Menu</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="menu-body">
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+                TOSHI BEANS
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html" class="nav-link">
+                    HOME
+                </a>
+
+                <a href="menu.html" class="nav-link active">
+                    MENU
+                </a>
+
+                <a href="about.html" class="nav-link">
+                    ABOUT
+                </a>
+
+                <a href="contact.html" class="nav-link">
+                    CONTACT
+                </a>
+
+                <a href="login.html" class="nav-link">
+                    LOGIN
+                </a>
+
+                <a href="signup.html" class="signup-btn">
+                    SIGN UP
+                </a>
+
+                <a href="cart.html" class="order-nav-btn">
+                    CART
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- MENU HERO -->
+    <section class="menu-hero">
+
+        <div class="menu-hero-content">
+
+            <p class="menu-small-title">
+                TOSHI BEANS
+            </p>
+
+            <h1>OUR MENU</h1>
+
+            <p>
+                Good coffee, good food, good days.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORY NAVIGATION -->
+    <section class="menu-category-nav">
+
+        <div class="category-buttons">
+
+            <a href="#hot-drinks">
+                HOT DRINKS
+            </a>
+
+            <a href="#iced-coffee">
+                ICED COFFEE
+            </a>
+
+            <a href="#matcha">
+                MATCHA
+            </a>
+
+            <a href="#non-coffee">
+                NON COFFEE
+            </a>
+
+            <a href="#fruit-soda">
+                FRUIT SODA
+            </a>
+
+            <a href="#snacks">
+                SNACKS
+            </a>
+
+            <a href="#add-ons">
+                ADD ONS
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENU CONTENT -->
+    <main class="menu-page">
+
+
+        <!-- HOT DRINKS -->
+        <section
+            class="menu-section"
+            id="hot-drinks"
+        >
+
+            <div class="menu-section-heading">
+
+                <p>WARM & COMFORTING</p>
+
+                <h2>HOT DRINKS</h2>
+
+            </div>
+
+            <div
+                class="menu-product-grid"
+                id="hotDrinksGrid"
+            ></div>
+
+        </section>
+
+
+        <!-- ICED COFFEE -->
+        <section
+            class="menu-section"
+            id="iced-coffee"
+        >
+
+            <div class="menu-section-heading">
+
+                <p>COFFEE FAVORITES</p>
+
+                <h2>ICED COFFEE BASED</h2>
+
+            </div>
+
+            <div
+                class="menu-product-grid"
+                id="icedCoffeeGrid"
+            ></div>
+
+        </section>
+
+
+        <!-- MATCHA -->
+        <section
+            class="menu-section"
+            id="matcha"
+        >
+
+            <div class="menu-section-heading">
+
+                <p>GREEN GOODNESS</p>
+
+                <h2>MATCHA</h2>
+
+            </div>
+
+            <div
+                class="menu-product-grid"
+                id="matchaGrid"
+            ></div>
+
+        </section>
+
+
+        <!-- NON COFFEE -->
+        <section
+            class="menu-section"
+            id="non-coffee"
+        >
+
+            <div class="menu-section-heading">
+
+                <p>CREAMY FAVORITES</p>
+
+                <h2>NON COFFEE BASED</h2>
+
+            </div>
+
+            <div
+                class="menu-product-grid"
+                id="nonCoffeeGrid"
+            ></div>
+
+        </section>
+
+
+        <!-- FRUIT SODA -->
+        <section
+            class="menu-section"
+            id="fruit-soda"
+        >
+
+            <div class="menu-section-heading">
+
+                <p>COOL & REFRESHING</p>
+
+                <h2>FRUIT SODA</h2>
+
+            </div>
+
+            <div
+                class="menu-product-grid"
+                id="fruitSodaGrid"
+            ></div>
+
+        </section>
+
+
+        <!-- SNACKS -->
+        <section
+            class="menu-section"
+            id="snacks"
+        >
+
+            <div class="menu-section-heading">
+
+                <p>PAIR IT WITH YOUR DRINK</p>
+
+                <h2>SNACKS</h2>
+
+            </div>
+
+            <div
+                class="menu-product-grid"
+                id="snacksGrid"
+            ></div>
+
+        </section>
+
+
+        <!-- ADD ONS -->
+        <section
+            class="menu-section add-ons-section"
+            id="add-ons"
+        >
+
+            <div class="menu-section-heading">
+
+                <p>MAKE IT YOURS</p>
+
+                <h2>ADD ONS</h2>
+
+            </div>
+
+            <div
+                class="add-ons-grid"
+                id="addOnsGrid"
+            ></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                TOSHI BEANS
+            </div>
+
+            <p>
+                Fresh coffee. Good food. Better days.
+            </p>
+
+            <p class="copyright">
+                © 2026 Toshi Beans. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- PRODUCT DATA -->
+    <script src="js/products.js"></script>
+
+
+    <script>
+
+        // =========================
+        // DISPLAY PRODUCT CARDS
+        // =========================
+
+        function displayProducts(category, containerId) {
+
+            const container = document.getElementById(containerId);
+
+            const categoryProducts =
+                getProductsByCategory(category);
+
+
+            categoryProducts.forEach(product => {
+
+                const lowestPrice =
+                    product.sizes[0].price;
+
+                const highestPrice =
+                    product.sizes[product.sizes.length - 1].price;
+
+
+                let priceText = "";
+
+
+                if (lowestPrice === null) {
+
+                    priceText = "Price unavailable";
+
+                }
+
+                else if (lowestPrice === highestPrice) {
+
+                    priceText = "₱" + lowestPrice;
+
+                }
+
+                else {
+
+                    priceText =
+                        "₱" +
+                        lowestPrice +
+                        " - ₱" +
+                        highestPrice;
+                }
+
+
+                const card =
+                    document.createElement("article");
+
+
+                card.className = "menu-product-card";
+
+
+                card.innerHTML = `
+
+                    <div class="menu-product-icon">
+                        ${product.icon}
+                    </div>
+
+
+                    <div class="menu-product-info">
+
+                        <p class="product-category-label">
+                            ${product.category}
+                        </p>
+
+
+                        <h3>
+                            ${product.name}
+                        </h3>
+
+
+                        <p class="menu-product-description">
+                            ${product.description}
+                        </p>
+
+
+                        <div class="menu-size-list">
+
+                            ${product.sizes.map(size => `
+
+                                <div class="menu-size-row">
+
+                                    <span>
+                                        ${size.size}
+                                    </span>
+
+                                    <strong>
+
+                                        ${
+                                            size.price === null
+                                            ? "—"
+                                            : "₱" + size.price
+                                        }
+
+                                    </strong>
+
+                                </div>
+
+                            `).join("")}
+
+                        </div>
+
+
+                        <div class="menu-card-bottom">
+
+                            <span class="menu-price">
+                                ${priceText}
+                            </span>
+
+
+                            ${
+                                lowestPrice === null
+
+                                ?
+
+                                `<span class="unavailable-button">
+                                    UNAVAILABLE
+                                </span>`
+
+                                :
+
+                                `<a
+                                    href="product.html?product=${product.id}"
+                                    class="menu-view-button"
+                                >
+                                    VIEW DETAILS
+                                </a>`
+                            }
+
+                        </div>
+
+                    </div>
+
+                `;
+
+
+                container.appendChild(card);
+
+            });
+
+        }
+
+
+
+        // =========================
+        // DISPLAY EACH CATEGORY
+        // =========================
+
+        displayProducts(
+            "Hot Drinks",
+            "hotDrinksGrid"
+        );
+
+
+        displayProducts(
+            "Iced Coffee Based",
+            "icedCoffeeGrid"
+        );
+
+
+        displayProducts(
+            "Matcha",
+            "matchaGrid"
+        );
+
+
+        displayProducts(
+            "Non Coffee Based",
+            "nonCoffeeGrid"
+        );
+
+
+        displayProducts(
+            "Fruit Soda",
+            "fruitSodaGrid"
+        );
+
+
+        displayProducts(
+            "Snacks",
+            "snacksGrid"
+        );
+
+
+
+        // =========================
+        // DISPLAY ADD ONS
+        // =========================
+
+        const addOnsContainer =
+            document.getElementById("addOnsGrid");
+
+
+        addOns.forEach(addOn => {
+
+            const item =
+                document.createElement("div");
+
+
+            item.className = "add-on-card";
+
+
+            item.innerHTML = `
+
+                <span>
+                    ${addOn.name}
+                </span>
+
+                <strong>
+                    ₱${addOn.price}
+                </strong>
+
+            `;
+
+
+            addOnsContainer.appendChild(item);
+
+        });
+
+    </script>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

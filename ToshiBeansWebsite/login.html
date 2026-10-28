@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toshi Beans | Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================
+           LOGIN PAGE
+        ========================= */
+
+        body.loginx-body {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            background-image: url("images/home.png");
+            background-size: 100vw 100vh;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            background-color: #F7F1E8;
+        }
+
+
+        /* HEADER */
+
+        .loginx-body .site-header {
+            background: rgba(255, 255, 255, 0.70);
+            backdrop-filter: blur(6px);
+        }
+
+
+        /* MAIN */
+
+        .loginx-main {
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 55px 20px;
+        }
+
+
+        /* LOGIN CARD */
+
+        .loginx-card {
+            width: 520px;
+            max-width: 100%;
+
+            padding: 28px 36px 20px;
+
+            background: rgba(255, 255, 255, 0.93);
+
+            border: 1px solid #B88968;
+            border-radius: 16px;
+
+            box-shadow:
+                0 14px 38px rgba(59, 40, 30, 0.07);
+        }
+
+
+        /* TITLE */
+
+        .loginx-card h1 {
+            margin: 0 0 30px;
+
+            text-align: center;
+
+            font-size: 28px;
+            font-weight: 700;
+
+            color: #3B281E;
+        }
+
+
+        /* FORM */
+
+        .loginx-form {
+            display: flex;
+            flex-direction: column;
+
+            gap: 22px;
+        }
+
+        .loginx-group {
+            display: flex;
+            flex-direction: column;
+
+            gap: 9px;
+        }
+
+        .loginx-group label {
+            font-size: 12px;
+            font-weight: 600;
+
+            color: #3B281E;
+        }
+
+        .loginx-group input {
+            width: 100%;
+            height: 50px;
+
+            padding: 0 14px;
+
+            border: 1px solid #B88968;
+            border-radius: 7px;
+
+            background: #FFFFFF;
+
+            color: #3B281E;
+
+            font-size: 13px;
+
+            outline: none;
+        }
+
+        .loginx-group input::placeholder {
+            color: #B79C89;
+        }
+
+        .loginx-group input:focus {
+            border-color: #6B4226;
+
+            box-shadow:
+                0 0 0 3px rgba(107, 66, 38, 0.08);
+        }
+
+
+        /* LOGIN BUTTON */
+
+        .loginx-button {
+            width: 100%;
+            height: 48px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: #7B4A2C;
+
+            color: #FFFFFF;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+        }
+
+        .loginx-button:hover {
+            background: #5E351F;
+        }
+
+
+        /* SIGN UP TEXT */
+
+        .loginx-switch {
+            margin: 16px 0 0;
+
+            text-align: center;
+
+            font-size: 11px;
+
+            color: #765B4A;
+        }
+
+        .loginx-switch a {
+            color: #7B4A2C;
+
+            font-weight: 600;
+        }
+
+        .loginx-switch a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* FOOTER */
+
+        .loginx-body .site-footer {
+            width: 100%;
+
+            margin: 0;
+            padding: 18px 0;
+
+            background: #3B281E;
+        }
+
+        .loginx-body .footer-container {
+            width: min(1100px, calc(100% - 40px));
+
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 20px;
+
+            text-align: center;
+        }
+
+        .loginx-body .footer-brand,
+        .loginx-body .footer-container p {
+            font-size: 9px;
+
+            color: #F0E7DF;
+        }
+
+
+        /* PHONE */
+
+        @media (max-width: 600px) {
+
+            .loginx-main {
+                padding: 35px 15px;
+            }
+
+            .loginx-card {
+                padding: 26px 20px 20px;
+            }
+
+            .loginx-card h1 {
+                font-size: 25px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body class="loginx-body">
+
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+                TOSHI BEANS
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html" class="nav-link">
+                    HOME
+                </a>
+
+                <a href="menu.html" class="nav-link">
+                    MENU
+                </a>
+
+                <a href="about.html" class="nav-link">
+                    ABOUT
+                </a>
+
+                <a href="contact.html" class="nav-link">
+                    CONTACT
+                </a>
+
+                <a href="login.html" class="nav-link active">
+                    LOGIN
+                </a>
+
+                <a href="signup.html" class="signup-btn">
+                    SIGN UP
+                </a>
+
+                <a href="cart.html" class="order-nav-btn">
+                    CART
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- LOGIN -->
+    <main class="loginx-main">
+
+        <section class="loginx-card">
+
+            <h1>
+                LOGIN
+            </h1>
+
+
+            <form
+                class="loginx-form"
+                id="loginForm"
+            >
+
+                <div class="loginx-group">
+
+                    <label for="loginEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="loginx-group">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="loginx-button"
+                >
+                    LOGIN
+                </button>
+
+            </form>
+
+
+            <p class="loginx-switch">
+
+                Don't have an account?
+
+                <a href="signup.html">
+                    Sign Up
+                </a>
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                TOSHI BEANS
+            </div>
+
+            <p>
+                • Fresh Coffee & Snacks
+            </p>
+
+            <p class="copyright">
+                © 2026 Toshi Beans
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        const loginForm =
+            document.getElementById("loginForm");
+
+
+        loginForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const email =
+                    document
+                        .getElementById("loginEmail")
+                        .value
+                        .trim();
+
+
+                const password =
+                    document
+                        .getElementById("loginPassword")
+                        .value
+                        .trim();
+
+
+                if (
+                    email === "" ||
+                    password === ""
+                ) {
+
+                    alert(
+                        "Please enter your email and password."
+                    );
+
+                    return;
+
+                }
+
+
+                localStorage.setItem(
+                    "toshiBeansLoggedIn",
+                    "true"
+                );
+
+
+                localStorage.setItem(
+                    "toshiBeansUserEmail",
+                    email
+                );
+
+
+                const checkout =
+                    localStorage.getItem(
+                        "toshiBeansCheckout"
+                    );
+
+
+                if (checkout === "true") {
+
+                    localStorage.removeItem(
+                        "toshiBeansCheckout"
+                    );
+
+
+                    window.location.href =
+                        "order-confirmed.html";
+
+                }
+
+                else {
+
+                    window.location.href =
+                        "index.html";
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
